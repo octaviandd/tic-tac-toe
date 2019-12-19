@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 60% 30%;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row{
+    width: 150px;
+    display:flex;
+    flex-direction: column;
+    border-collapse: collapse;
+}
+
+.col{
+    height: 150px;
+    border: 1px black solid;
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 150px;
+    font-size: 4rem;
+}
+  
+
+td{
+    border: 1px solid black;
+}
+
+#blank,
+#reset_button,
+#reset_game{
+    border:none;
+}
+
+#player_one,
+#player_one_score,
+#player_two_score,
+#player_two,
+#reset_button,
+#reset_game{
+    text-align: center;
+}
+
+button{
+    padding: 5px 5px 5px 5px;
+    border-radius: 3px;
+    margin-top: 50px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
