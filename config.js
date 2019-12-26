@@ -51,6 +51,7 @@ const Gameboard = (function(){
         currentPlayer = 0;
         squares.forEach((e) =>{
             e.innerText = ''
+            e.style.backgroundColor = '';
         })
         xChoices = []
         oChoices = []
@@ -149,8 +150,9 @@ squares.forEach(square =>{
         game_ended = true;
         player2Score++
         document.querySelector('#player_two_score').innerText = player2Score;
-        Winner.getOColor();
-        console.log(oColorSquare);
+        let combo = Winner.getOColor();
+        combo.forEach(i => document.querySelector('#c'+i).style.backgroundColor = 'red');
+        makeMoves = 0
         
         
     }
@@ -158,14 +160,21 @@ squares.forEach(square =>{
         game_ended = true;
         player1Score++     
         document.querySelector('#player_one_score').innerText = player1Score;
-        Winner.getXColor();
+        let combo = Winner.getXColor();
+        combo.forEach(i => document.querySelector('#c'+i).style.backgroundColor = 'red');
+        makeMoves = 0;
         }
     
 
     if(makeMoves === 9 && Winner.checkForOWinner() === false && Winner.checkForXWinner() === false){
         setTimeout(function(){
             alert(`It's a draw !`)
+            makeMoves = 0;
+            
         }, 600)
+        setTimeout(function(){
+            Gameboard.restartGame();
+        }, 500)
     }
     
     
@@ -175,3 +184,9 @@ squares.forEach(square =>{
 
 btnResetGame.addEventListener('click', Gameboard.restartGame)
 btnResetScore.addEventListener('click', Gameboard.resetScore)
+
+
+
+
+
+
