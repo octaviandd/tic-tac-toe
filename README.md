@@ -1,3 +1,3 @@
 # tic-tac-toe
 
-![](tic-tac-toe2.gif)
+![](tic-tac-toe3.gif)
