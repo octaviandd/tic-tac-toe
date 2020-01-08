@@ -8,12 +8,56 @@ h1{
     text-align: center;
     margin-bottom: 100px;
     margin-top: 50px;
+    font-size: 40px;
+    letter-spacing: 6px;
+    
 }
 
 .container{
     display: grid;
     grid-template-columns: 60% 30%;
 }
+
+.player-scores{
+    border: 1px solid black;
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.player-name{
+    display: flex;
+    width: 50%;
+    border-bottom: 1px solid black;
+    width: 100%;
+    align-items: center;
+}
+
+.player-name div{
+    width: 50%;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.player-score{
+    display: flex;
+    justify-content: center;
+}
+
+.player-score div{
+    width: 50%;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+}
+
+
+
+
+
 
 .main{
     display: flex;
@@ -139,6 +183,37 @@ input{
 .start-button-class:hover{
     color: white !important;
 }
+
+#c0,
+#c1,
+#c2{
+    border-left: none;
+}
+
+#c0,
+#c3,
+#c6{
+    border-top:none;
+}
+
+#c6,
+#c7,
+#c8{
+    border-right: none;
+}
+
+#c2,
+#c5,
+#c8{
+    border-bottom: none;
+}
+
+
+
+/* 
+.winnerSquare{
+    color: ;
+} */
 
 
 
