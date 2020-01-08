@@ -166,6 +166,8 @@ squares.forEach(square =>{
         let combo = Winner.getOColor();
         combo.forEach(i => document.querySelector('#c'+i).style.backgroundColor = '#28A744');
         makeMoves = 0
+        xColorSquare = []
+        oColorSquare = []
         
         
     }
@@ -176,6 +178,8 @@ squares.forEach(square =>{
         let combo = Winner.getXColor();
         combo.forEach(i => document.querySelector('#c'+i).style.backgroundColor = '#28A744');
         makeMoves = 0;
+        oColorSquare = []
+        xColorSquare = []
         }
     
 
