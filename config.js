@@ -1,3 +1,5 @@
+
+
 const btnResetScore = document.querySelector('#reset');
 const btnResetGame = document.querySelector('#game');
 const squares = document.querySelectorAll('.col');
@@ -18,6 +20,17 @@ player1Score = 0
 player2Score = 0
 let currentPlayer = 0;
 game_ended = false
+
+
+
+var typed = new Typed('#typed-string', {
+    strings: ["Tic Tac Toe"],
+    typeSpeed: 80,
+    loop: true,
+    backSpeed: 80,
+    
+  });
+
 
 
 
