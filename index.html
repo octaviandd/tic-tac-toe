@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1e10f2d5f9.js" crossorigin="anonymous"></script>
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
@@ -14,19 +15,19 @@
     <div class='container'>
         <div class="main">
             <div class="row">
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
+                <div class="col" id='c0'></div>
+                <div class="col" id='c1'></div>
+                <div class="col" id='c2'></div>
             </div>
             <div class="row">
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
+                <div class="col" id='c3'></div>
+                <div class="col" id='c4'></div>
+                <div class="col" id='c5'></div>
             </div>
             <div class="row">
-                <div class="col"></div>
-                <div class="col"></div>
-                <div class="col"></div>
+                <div class="col" id='c6'></div>
+                <div class="col" id='c7'></div>
+                <div class="col" id='c8'></div>
             </div>
         </div>
     
@@ -34,26 +35,38 @@
         <table>
             <tr>
                 <td id='blank'></td>
+                <td>X</td>
+                <td>O</td>
+            </tr>
+            <tr>
+                <td id='blank'>Nicknames</td>
                 <td id="player_one"></td>
                 <td id='player_two'></td>
             </tr>
             <tr>
-                <td>Score</td>
+                <td id='middle'>Score</td>
                 <td id='player_one_score'></td>
                 <td id='player_two_score'></td>
             </tr>
             <tr>
                 <td id='reset_button'><button id='reset'>Reset Score</button></td>
-                <td id='reset_game'><button id='game'>Reset Game</button></td>
+                <td id='reset_game'><button id='game'>Reset Game</button></td>             
             </tr>
-
-
         </table>
-
-
     </div>
+
+
+    <div class="modal">
+       <div class="centered">
+        <h2>Pick your names</h2>
+        <div class="X-Player">Name for X Player: <input type="text" id='x_input'></div>
+        <div class="O-Player">Name for O Player: <input type="text" id='o_input'></div>
+        <div class="start-button-class" id="start">Start</div>
+       </div>
+    </div>
+
     
 
-    <script src='config1.js'></script>
+    <script src='config.js'></script>
 </body>
 </html>
