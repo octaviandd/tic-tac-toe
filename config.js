@@ -1,8 +1,8 @@
 const btnResetScore = document.querySelector('#reset');
 const btnResetGame = document.querySelector('#game');
 const squares = document.querySelectorAll('.col');
-let player1Score = document.querySelector('#player_one_score')
-let player2Score = document.querySelector('#player_two_score')
+let player1Score = document.querySelector('#one_score')
+let player2Score = document.querySelector('#two_score')
 const winningCombos = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
 const startGame = document.querySelector('#start')
 const xNameInput = document.querySelector('#x_input');
@@ -30,8 +30,8 @@ startGame.addEventListener('click', function(){
     }
 
     else{
-        player_one.innerText = xNameInput.value;
-        player_two.innerText = oNameInput.value;
+        player_one.innerText = xNameInput.value.toUpperCase() + " (X)";
+        player_two.innerText = oNameInput.value.toUpperCase() + " (0)";
         modal.classList.add('active')
     }
 
@@ -58,10 +58,10 @@ const Gameboard = (function(){
     }
 
     const resetScore = () =>{
-        player1score = 0;
-        player2score = 0;
-        document.querySelector('#player_one_score').innerText = player1score;
-        document.querySelector('#player_two_score').innerText = player2score;
+        player1Score = 0;
+        player2Score = 0;
+        document.querySelector('#one_score').innerText = player1Score;
+        document.querySelector('#two_score').innerText = player2Score;
     }
 
     
@@ -149,9 +149,9 @@ squares.forEach(square =>{
     if(Winner.checkForOWinner()){
         game_ended = true;
         player2Score++
-        document.querySelector('#player_two_score').innerText = player2Score;
+        document.querySelector('#two_score').innerText = player2Score;
         let combo = Winner.getOColor();
-        combo.forEach(i => document.querySelector('#c'+i).style.backgroundColor = 'red');
+        combo.forEach(i => document.querySelector('#c'+i).style.backgroundColor = '#28A744');
         makeMoves = 0
         
         
@@ -159,9 +159,9 @@ squares.forEach(square =>{
     if(Winner.checkForXWinner()){
         game_ended = true;
         player1Score++     
-        document.querySelector('#player_one_score').innerText = player1Score;
+        document.querySelector('#one_score').innerText = player1Score;
         let combo = Winner.getXColor();
-        combo.forEach(i => document.querySelector('#c'+i).style.backgroundColor = 'red');
+        combo.forEach(i => document.querySelector('#c'+i).style.backgroundColor = '#28A744');
         makeMoves = 0;
         }
     
